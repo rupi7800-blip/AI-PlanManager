@@ -37,7 +37,8 @@ npm test             # 31 test unitari (motore + proxy)
 ```
 Nessuna dipendenza da installare (Node ≥ 18). Per installare l'app: apri l'indirizzo in Chrome/Edge/Safari → "Installa app" / "Aggiungi a Home".
 
-**Pubblicazione gratuita**: la cartella `app/` è statica — basta GitHub Pages o qualsiasi hosting statico (HTTPS necessario per service worker e notifiche).
+**Pubblicazione gratuita**: il workflow `.github/workflows/pages.yml` esegue i test e pubblica la cartella `app/` su GitHub Pages a ogni push su `main`
+(attivazione una tantum: *Settings → Pages → Source: GitHub Actions*). Indirizzo: https://rupi7800-blip.github.io/ai-planmanager/
 
 ## Estensione (finestrella flottante)
 
