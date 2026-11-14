@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "AI Plan Manager – Finestrella",
+  "short_name": "AI Plan",
+  "version": "1.0.0",
+  "description": "Mostra consumi, limiti e suggerimenti di AI Plan Manager in una finestrella discreta sulle pagine delle AI.",
+  "permissions": ["storage", "notifications"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "AI Plan Manager" },
+  "icons": { "16": "icons/icon-16.png", "32": "icons/icon-32.png", "48": "icons/icon-48.png", "128": "icons/icon-128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*", "https://chat.openai.com/*", "https://claude.ai/*", "https://gemini.google.com/*",
+        "https://www.perplexity.ai/*", "https://perplexity.ai/*", "https://copilot.microsoft.com/*", "https://grok.com/*",
+        "https://chat.deepseek.com/*", "https://chat.mistral.ai/*"
+      ],
+      "js": ["content/widget.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["http://localhost/*", "http://127.0.0.1/*", "https://*.github.io/*"],
+      "js": ["content/bridge.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

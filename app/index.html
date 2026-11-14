@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Monitora, ottimizza e gestisci i tuoi abbonamenti alle intelligenze artificiali.">
+  <meta name="theme-color" content="#2a78d6">
+  <meta name="aipm-app" content="1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https: http://localhost:* http://127.0.0.1:*; object-src 'none'; base-uri 'self'">
+  <title>AI Plan Manager</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><img src="icons/icon.svg" alt="">AI Plan Manager</div>
+      <nav class="nav" aria-label="Navigazione principale">
+        <a href="#/" data-route=""><span class="ico">◧</span>Dashboard<span class="badge-count" id="alert-count" hidden></span></a>
+        <a href="#/servizi" data-route="servizi"><span class="ico">◎</span>Le mie AI</a>
+        <a href="#/consumi" data-route="consumi"><span class="ico">▤</span>Consumi</a>
+        <a href="#/consulente" data-route="consulente"><span class="ico">✦</span>Consulente</a>
+        <a href="#/confronto" data-route="confronto"><span class="ico">⇄</span>Confronto modelli</a>
+        <a href="#/indici" data-route="indici"><span class="ico">∑</span>Indici di efficienza</a>
+        <a href="#/storico" data-route="storico"><span class="ico">◷</span>Storico</a>
+        <a href="#/impostazioni" data-route="impostazioni"><span class="ico">⚙</span>Impostazioni</a>
+      </nav>
+      <div class="foot">Dati salvati solo su questo dispositivo.<br>v<span id="ver">1.0.0</span></div>
+    </aside>
+    <main id="view" tabindex="-1"><noscript>Questa applicazione richiede JavaScript.</noscript></main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
